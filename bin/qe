@@ -15,7 +15,7 @@ program
 	.description(cliPkg.description)
 
 var switchEnv = program
-  	.command("switchenv")
+  	.command("switch-env")
   	.description("Switch your environment to the specified environment")
     .option("-e --environment [environment]", "environment to be logged in to")
     .option("-u --username [username]", "username for your appc account")
