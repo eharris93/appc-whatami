@@ -15,37 +15,37 @@ program
 	.description(cliPkg.description)
 
 var switchEnv = program
-    	.command("switchenv")
-    	.description("Switch your environment to the specified environment")
-      .option("-e --environment [environment]", "environment to be logged in to")
-      .option("-u --username [username]", "username for your appc account")
-      .option("-p --password [password", "password for your appc account")
-      .option("-o --orgId [org-id]", "org to log in to, by default will be the team org for each env")
-    	.action(function(){
-    		var orgId;
-    		if(switchEnv.orgId === undefined){
-					/^prod/.test(switchEnv.environment) ? orgId = "100000676" : orgId = "100001710";
-				}else{
-					orgId = switchEnv.orgId;
-				}
-        switchEnv.environment === undefined || switchEnv.username === undefined || switchEnv.password === undefined ? switchEnv.help() : switchEnvCommand(switchEnv.environment, switchEnv.username, switchEnv.password, orgId);
-      });
+  	.command("switchenv")
+  	.description("Switch your environment to the specified environment")
+    .option("-e --environment [environment]", "environment to be logged in to")
+    .option("-u --username [username]", "username for your appc account")
+    .option("-p --password [password", "password for your appc account")
+    .option("-o --orgId [org-id]", "org to log in to, by default will be the team org for each env")
+  	.action(function(){
+  		var orgId;
+  		if(switchEnv.orgId === undefined){
+				/^prod/.test(switchEnv.environment) ? orgId = "100000676" : orgId = "100001710";
+			}else{
+				orgId = switchEnv.orgId;
+			}
+      switchEnv.environment === undefined || switchEnv.username === undefined || switchEnv.password === undefined ? switchEnv.help() : switchEnvCommand(switchEnv.environment, switchEnv.username, switchEnv.password, orgId);
+    });
 
 var updateTiapp = program
-      .command("update-tiapp")
-      .description("Update the current apps tiapp.xml to either the latest SDK on machine, or the specified SDK")
-      .option("-s --sdk [sdk]", "SDK to change to")
-      .option("-D --projectDir [project-dir]", "path to the project, by default it will use the cwd")
-      .action(function(){
-      	updateTiapp.sdk === undefined ? updateTiapp.help() : tiappCommand(updateTiapp.sdk, updateTiapp.projectDir);
-      });
+    .command("update-tiapp")
+    .description("Update the current apps tiapp.xml to either the latest SDK on machine, or the specified SDK")
+    .option("-s --sdk [sdk]", "SDK to change to")
+    .option("-D --projectDir [project-dir]", "path to the project, by default it will use the cwd")
+    .action(function(){
+    	updateTiapp.sdk === undefined ? updateTiapp.help() : tiappCommand(updateTiapp.sdk, updateTiapp.projectDir);
+    });
 
 var envCheck = program
-			.command("check-env")
-			.description("Prints out information about your environment")
-			.action(function(){
-				envCheckCommand();
-			});
+		.command("check-env")
+		.description("Prints out information about your environment")
+		.action(function(){
+			envCheckCommand();
+		});
 
 program
   .command("help [command]")
