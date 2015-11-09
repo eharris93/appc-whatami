@@ -6,8 +6,8 @@ var cliPkg = require(path.join(__dirname, "../", "package.json"));
 var colors = require("colors")
 
 var switchEnvCommand = require("../lib/commands/switchEnv"),
-		tiappCommand = require("../lib/commands/updateTiapp")
-		envCheckCommand = require("../lib/commands/envCheck");
+    tiappCommand = require("../lib/commands/updateTiapp")
+	envCheckCommand = require("../lib/commands/envCheck");
 
 program
 	.version(cliPkg.version)
@@ -15,8 +15,8 @@ program
 	.description(cliPkg.description)
 
 var switchEnv = program
-  	.command("switch-env")
-  	.description("Switch your environment to the specified environment")
+    .command("switch-env")
+    .description("Switch your environment to the specified environment")
     .option("-e --environment [environment]", "environment to be logged in to")
     .option("-u --username [username]", "username for your appc account")
     .option("-p --password [password", "password for your appc account")
@@ -41,11 +41,11 @@ var updateTiapp = program
     });
 
 var envCheck = program
-		.command("check-env")
-		.description("Prints out information about your environment")
-		.action(function(){
-			envCheckCommand();
-		});
+	.command("check-env")
+	.description("Prints out information about your environment")
+	.action(function(){
+		envCheckCommand();
+	});
 
 program
   .command("help [command]")
