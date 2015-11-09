@@ -13,7 +13,7 @@ Install using the following command
 
 # What can I do?
 
-Currently you do run the following commands
+Currently you can run the following commands
 
 ~~~bash
 qe switchenv -u <username> -p <password> -e <environment>
