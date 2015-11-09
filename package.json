@@ -1,0 +1,28 @@
+{
+  "name": "qe-helper",
+  "version": "0.0.1",
+  "description": "Command line utility to help with those little things in qe life",
+  "author": "Ewan <ewanharris93@gmail.com>",
+  "license": "ISC",
+  "preferGlobal": true,
+  "homepage": "https://github.com/eharris93/qe-helper#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eharris93/qe-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eharris93/qe-helper/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "qe": "./bin/qe"
+  },
+  "dependencies": {
+    "async": "^1.5.0",
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "tiapp.xml": "^0.2.2"
+  }
+}
