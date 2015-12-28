@@ -1,7 +1,7 @@
-# appc-whatami
+# qe-helper
 
 
-This node module is designed to reduce the time spent doing repetitive tasks.62118
+This node module is designed to reduce the time spent doing repetitive tasks.
 
 # Installation
 
