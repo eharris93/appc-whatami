@@ -23,6 +23,7 @@
     "async": "^1.5.0",
     "colors": "^1.1.2",
     "commander": "^2.9.0",
+    "fields": "^0.1.24",
     "tiapp.xml": "^0.2.2"
   }
 }
