@@ -1,5 +1,6 @@
 # qe-helper
 
+[![bitHound Overall Score](https://www.bithound.io/github/eharris93/qe-helper/badges/score.svg)](https://www.bithound.io/github/eharris93/qe-helper)
 
 This node module is designed to reduce the time spent doing repetitive tasks.
 
