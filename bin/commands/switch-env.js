@@ -2,7 +2,7 @@
 
 var switchEnvCommand = require('../../lib/commands/switch-env');
 
-exports.define = function(program) {
+exports.define = function (program) {
   program
     .command('switch-env')
     .description('Switch your environment to the specified environment')
@@ -10,7 +10,7 @@ exports.define = function(program) {
     .option('-u --username [username]', 'username for your appc account')
     .option('-p --password [password', 'password for your appc account')
     .option('-o --orgId [org-id]', 'org to log in to, by default will be the team org for each env')
-    .action(function(command) {
+    .action(function (command) {
       var orgId;
       if (command.orgId === undefined) {
         /^prod/.test(command.environment) ? orgId = 'prodOrg' : orgId = 'preProdOrg';

@@ -14,6 +14,7 @@
     "url": "https://github.com/eharris93/qe-helper/issues"
   },
   "scripts": {
+    "commit": "git-cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
@@ -26,5 +27,16 @@
     "fields": "^0.1.24",
     "semver-regex": "^1.0.0",
     "tiapp.xml": "^0.2.2"
+  },
+  "devDependencies": {
+    "commitizen": "^2.4.6",
+    "cz-conventional-changelog": "^1.1.5",
+    "eslint": "^1.10.3",
+    "grunt": "^0.4.5",
+    "grunt-eslint": "^17.3.1",
+    "load-grunt-tasks": "^3.4.0"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
