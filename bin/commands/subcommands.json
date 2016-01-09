@@ -1,0 +1,9 @@
+{
+  "subcommands": [
+    "create-command",
+    "env-info",
+    "get-latest",
+    "switch-env",
+    "update-tiapp"
+  ]
+}

@@ -6,7 +6,7 @@ module.exports = {
     'semi': [2,'always'],
     'no-unused-vars': [1, {'vars': 'all', 'varsIgnorePattern': 'colors', 'argsIgnorePattern': 'stderr'}],
     'no-console': 0,
-    'space-before-function-paren': 2,
+    'space-before-blocks': 2,
     'no-extra-boolean-cast': 0
   },
   'env': {
