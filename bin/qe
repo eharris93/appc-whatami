@@ -1,35 +1,21 @@
 #!/usr/bin/env node
 
 var program = require('commander');
-var path = require('path');
-var cliPkg = require(path.join(__dirname, '../', 'package.json'));
 var colors = require('colors');
-
-var processArgs = process.argv.slice(0);
-var _version = program.version;
-program.version = undefined;
-
-program
-  .description(cliPkg.description)
-  .option('-v, --version', 'output the version')
-  .parseOptions(program.normalize(processArgs.slice(2)));
-
-if (program.version) {
-  console.log(cliPkg.version);
-}
 
 require('./commands/_index').define(program);
 
 program
+  .version('0.0.1')
   .command('*', '', {noHelp: true})
   .action(function(commandName) {
     console.error('"' + commandName + '" is not a valid command name!');
-    program.outputHelp();
+    program.help();
     process.exit(1);
   });
 
-var args = program.parse(processArgs).args;
+program.parse(process.argv);
 
-if (!args.length) {
+if (program.args.length === 0) {
   program.help();
 }

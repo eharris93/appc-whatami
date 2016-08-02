@@ -10,14 +10,17 @@ exports.define = function (program) {
     .option('-c --core [core]', 'Install the latest core or specifythe version for the appc-cli core package')
     .option('-s --sdk [sdk]', 'Install the latest SDK or specify the specific SDK to install, overrides --branch')
     .option('-b --branch [branch]', 'the branch to pull from for the SDK')
-    .parse(process.argv)
     .on('--help', function () {
       console.log('Examples:\n');
-      console.log('\tqe get-latest -c -n \t\t   This will install the latest version of core and NPM');
-      console.log('\tqe get-latest -c 5.1.1 -n \t   This will install 5.1.1 version of core and the latest NPM');
-      console.log('\tqe get-latest -s 5.1.1.GA -n 4.0.0 This will install the 5.1.1.GA version of SDK and 4.0.0 NPM');
+      console.log('\tqe get-latest -c -n \t\t        This will install the latest version of core and NPM');
+      console.log('\tqe get-latest -c 5.1.1 -n \t        This will install 5.1.1 version of core and the latest NPM');
+      console.log('\tqe get-latest -s 5.1.1.GA -n 4.0.0c \tThis will install the 5.1.1.GA version of SDK and 4.0.0 NPM');
+      console.log(('\n'))
     })
     .action(function (command) {
+      if(!command.npm && !command.core && !command.sdk && !command.branch) {
+        command.help();
+      }
       getLatestCommand(command.npm, command.core, command.sdk, command.branch);
     });
 };
