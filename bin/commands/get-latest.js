@@ -15,7 +15,7 @@ exports.define = function (program) {
       console.log('\tqe get-latest -c -n \t\t        This will install the latest version of core and NPM');
       console.log('\tqe get-latest -c 5.1.1 -n \t        This will install 5.1.1 version of core and the latest NPM');
       console.log('\tqe get-latest -s 5.1.1.GA -n 4.0.0c \tThis will install the 5.1.1.GA version of SDK and 4.0.0 NPM');
-      console.log(('\n'))
+      console.log(('\n'));
     })
     .action(function (command) {
       if(!command.npm && !command.core && !command.sdk && !command.branch) {
