@@ -10,7 +10,7 @@ exports.define = function (program) {
     .option('-c --core [core]', 'Glob to match core versions against')
     .on('--help', function () {
       console.log('Examples:\n');
-      console.log('\tqe remove --core 5.3.* --sdk 6.*.* \t\t        This wall remove all 5.3.X versions of the core and 6.X.X versions of SDK');
+      console.log('\tqe remove --core 5.3.* --sdk 6.*.* \t\t        This will remove all 5.3.X versions of the core and 6.X.X versions of SDK');
       console.log(('\n'));
     })
     .action(function (command) {
