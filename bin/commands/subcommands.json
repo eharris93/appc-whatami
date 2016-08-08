@@ -1,1 +1,1 @@
-{"subcommands":["create-command","env-info","get-latest","switch-env","update-tiapp","config"]}
+{"subcommands":["create-command","env-info","get-latest","switch-env","update-tiapp","config","remove"]}
