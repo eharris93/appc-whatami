@@ -1,6 +1,6 @@
 {
   "name": "qe-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Command line utility to help with those little things in qe life",
   "author": "Ewan <ewanharris93@gmail.com>",
   "license": "ISC",
