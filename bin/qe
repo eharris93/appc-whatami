@@ -6,7 +6,7 @@ var colors = require('colors');
 require('./commands/_index').define(program);
 
 program
-  .version('0.0.1')
+  .version('1.0.0')
   .command('*', '', {noHelp: true})
   .action(function(commandName) {
     console.error('"' + commandName + '" is not a valid command name!');
